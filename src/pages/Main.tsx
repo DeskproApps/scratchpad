@@ -1,7 +1,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { TextArea, GetStateResponse } from "@deskpro/app-sdk";
-import { Stack, Button, H1, useDeskproAppClient } from "@deskpro/app-sdk";
-import { useState, useEffect } from "react";
+import {
+  Stack,
+  Button,
+  H1,
+  useInitialisedDeskproAppClient,
+  useDeskproAppClient,
+} from "@deskpro/app-sdk";
+import { useState } from "react";
 
 import useDebounce from "../utils/debounce";
 
@@ -11,15 +17,18 @@ export const Main = () => {
   const [text, setText] = useState<string>("");
   const debouncedText = useDebounce(text, 200);
 
-  useEffect(() => {
-    client?.setState<string>("scratchpad", debouncedText);
-  }, [debouncedText]);
+  useInitialisedDeskproAppClient(
+    (client) => {
+      client?.setState<string>("scratchpad", debouncedText);
+    },
+    [debouncedText]
+  );
 
-  useEffect(() => {
+  useInitialisedDeskproAppClient((client) => {
     client
       ?.getState<string>("scratchpad")
       .then((res: GetStateResponse<string>[]) => setText(res[0]?.data ?? ""));
-  }, [client]);
+  });
 
   const deleteText = () => {
     client?.setState<string>("scratchpad", "");
