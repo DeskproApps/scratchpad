@@ -20,7 +20,7 @@ export const Main = () => {
 
   useInitialisedDeskproAppClient((client) => {
     client
-      ?.getUserState<string>("scratchpad")
+      .getUserState<string>("scratchpad")
       .then((res: GetStateResponse<string>[]) => {
         setRanFirstTime(true);
         setText(res[0]?.data ?? "");
@@ -30,7 +30,7 @@ export const Main = () => {
   useInitialisedDeskproAppClient(
     (client) => {
       if (ranFirstTime) {
-        client?.setUserState<string>("scratchpad", debouncedText);
+        client.setUserState<string>("scratchpad", debouncedText);
       }
     },
     [debouncedText]
