@@ -17,21 +17,24 @@ export const Main = () => {
   const [text, setText] = useState<string>("");
   const debouncedText = useDebounce(text, 200);
 
+  useInitialisedDeskproAppClient((client) => {
+    client
+      ?.getUserState<string>("scratchpad")
+      .then((res: GetStateResponse<string>[]) => {
+        setText(res[0]?.data ?? "");
+      });
+  });
+
   useInitialisedDeskproAppClient(
     (client) => {
-      client?.setState<string>("scratchpad", debouncedText);
+      debouncedText &&
+        client?.setUserState<string>("scratchpad", debouncedText);
     },
     [debouncedText]
   );
 
-  useInitialisedDeskproAppClient((client) => {
-    client
-      ?.getState<string>("scratchpad")
-      .then((res: GetStateResponse<string>[]) => setText(res[0]?.data ?? ""));
-  });
-
   const deleteText = () => {
-    client?.setState<string>("scratchpad", "");
+    client?.setUserState<string>("scratchpad", "");
     setText("");
   };
 
