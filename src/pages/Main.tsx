@@ -47,21 +47,32 @@ export const Main = () => {
         variant="inline"
         value={text}
         onChange={(e) => setText(e.target.value)}
-        placeholder="Enter stuff.."
+        placeholder="Enter text here..."
         style={{
           resize: "none",
           minHeight: "10em",
           maxHeight: "100%",
           height: "auto",
+          border: "none",
         }}
       />
+      <div
+        style={{
+          content: " ",
+          display: "block",
+          borderBottom: "0.5px solid #D3D6D7",
+          width: "110%",
+          marginLeft: "-5%",
+        }}
+      ></div>
       <Stack align="center" style={{ width: "100%" }} justify={"space-between"}>
         <Button
           onClick={deleteText}
           style={{
             backgroundColor: "transparent",
             color: "#1c3e55",
-            padding: "20px 48px 20px 48px",
+            padding: "4px 8px 4px 8px",
+            marginLeft: "3px",
           }}
           size="large"
           text="Clear"
