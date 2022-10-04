@@ -15,20 +15,23 @@ export const Main = () => {
   const { client } = useDeskproAppClient();
 
   const [text, setText] = useState<string>("");
+  const [ranFirstTime, setRanFirstTime] = useState<boolean>(false);
   const debouncedText = useDebounce(text, 200);
 
   useInitialisedDeskproAppClient((client) => {
     client
       ?.getUserState<string>("scratchpad")
       .then((res: GetStateResponse<string>[]) => {
+        setRanFirstTime(true);
         setText(res[0]?.data ?? "");
       });
   });
 
   useInitialisedDeskproAppClient(
     (client) => {
-      debouncedText &&
+      if (ranFirstTime) {
         client?.setUserState<string>("scratchpad", debouncedText);
+      }
     },
     [debouncedText]
   );
