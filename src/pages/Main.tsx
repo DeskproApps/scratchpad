@@ -16,7 +16,7 @@ export const Main = () => {
 
   const [text, setText] = useState<string>("");
   const [ranFirstTime, setRanFirstTime] = useState<boolean>(false);
-  const debouncedText = useDebounce(text, 200);
+  const debouncedText = useDebounce(text, 700);
 
   useInitialisedDeskproAppClient((client) => {
     client
