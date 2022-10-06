@@ -1,7 +1,7 @@
 Scratchpad
 ==============
 
-TODO: In this app, you're able to have your own scratchpad, where you're able to take notes that are binded to your acount, making it private.
+TODO: This app is a notepad which is available to view and edit while in all parts of Deskpro
 
 Basic Usage
 -----------
