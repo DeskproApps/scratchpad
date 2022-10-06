@@ -1,4 +1,4 @@
-Scratchpad App
+Scratchpad
 ==============
 
 TODO: In this app, you're able to have your own scratchpad, where you're able to take notes that are binded to your acount, making it private.

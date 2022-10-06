@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { TextArea, GetStateResponse } from "@deskpro/app-sdk";
+import { GetStateResponse, TextArea } from "@deskpro/app-sdk";
 import {
   Stack,
   Button,
@@ -17,13 +17,14 @@ export const Main = () => {
   const [text, setText] = useState<string>("");
   const [ranFirstTime, setRanFirstTime] = useState<boolean>(false);
   const [saveStatus, setSaveStatus] = useState<string>("Saved");
-  const debouncedText = useDebounce(text, 700);
+  const { debouncedValue, setDebouncedValue } = useDebounce(text, 500);
 
   useInitialisedDeskproAppClient((client) => {
     client
       .getUserState<string>("scratchpad")
       .then((res: GetStateResponse<string>[]) => {
         setText(res[0]?.data ?? "");
+        setDebouncedValue(res[0]?.data ?? "");
         setRanFirstTime(true);
       });
   });
@@ -32,11 +33,11 @@ export const Main = () => {
     (client) => {
       if (ranFirstTime) {
         setSaveStatus("Saving");
-        client.setUserState<string>("scratchpad", debouncedText);
+        client.setUserState<string>("scratchpad", debouncedValue);
         setSaveStatus("Saved");
       }
     },
-    [debouncedText]
+    [debouncedValue]
   );
 
   const deleteText = () => {
@@ -56,7 +57,9 @@ export const Main = () => {
           minHeight: "10em",
           maxHeight: "100%",
           height: "auto",
+          width: "100%",
           border: "none",
+          overflow: "hidden",
         }}
       />
       <div
@@ -72,18 +75,20 @@ export const Main = () => {
         <Button
           onClick={deleteText}
           style={{
+            boxShadow: "none",
+            border: "1px solid #D3D6D7",
             backgroundColor: "transparent",
-            color: "#1c3e55",
-            padding: "4px 8px 4px 8px",
+            color: "#000000",
+            padding: "7px 24px 7px 24px",
             marginLeft: "3px",
           }}
           size="large"
           text="Clear"
         ></Button>
-        {debouncedText === text ? (
-          <H1>{saveStatus}</H1>
+        {debouncedValue === text ? (
+          <H1 style={{ color: "#8B9293" }}>{saveStatus}</H1>
         ) : (
-          <H1>User is typing...</H1>
+          <H1 style={{ color: "#8B9293" }}>Typing...</H1>
         )}
       </Stack>
     </Stack>

@@ -1,6 +1,6 @@
 {
   "name": "@deskpro-apps/scratchpad",
-  "title": "Scratchpad App",
+  "title": "Scratchpad",
   "description": "This app allows you to store your own notes in a scratchpad.",
   "version": "1.0.0",
   "scope": "agent",
