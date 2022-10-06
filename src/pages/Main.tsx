@@ -16,21 +16,24 @@ export const Main = () => {
 
   const [text, setText] = useState<string>("");
   const [ranFirstTime, setRanFirstTime] = useState<boolean>(false);
+  const [saveStatus, setSaveStatus] = useState<string>("Saved");
   const debouncedText = useDebounce(text, 700);
 
   useInitialisedDeskproAppClient((client) => {
     client
       .getUserState<string>("scratchpad")
       .then((res: GetStateResponse<string>[]) => {
-        setRanFirstTime(true);
         setText(res[0]?.data ?? "");
+        setRanFirstTime(true);
       });
   });
 
   useInitialisedDeskproAppClient(
     (client) => {
       if (ranFirstTime) {
+        setSaveStatus("Saving");
         client.setUserState<string>("scratchpad", debouncedText);
+        setSaveStatus("Saved");
       }
     },
     [debouncedText]
@@ -77,7 +80,11 @@ export const Main = () => {
           size="large"
           text="Clear"
         ></Button>
-        {debouncedText === text ? <H1>Saved</H1> : <H1>Saving...</H1>}
+        {debouncedText === text ? (
+          <H1>{saveStatus}</H1>
+        ) : (
+          <H1>User is typing...</H1>
+        )}
       </Stack>
     </Stack>
   );
