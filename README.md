@@ -1,12 +1,12 @@
-My App
-===
+Scratchpad
+==============
 
-TODO: Include a summary of app functionality and a screenshot
+TODO: This app is a notepad which is available to view and edit while in all parts of Deskpro
 
 Basic Usage
----
+-----------
 
-We recommend using [Yarn](https://yarnpkg.com/) to manage this project. First, start by installing the project 
+We recommend using [Yarn](https://yarnpkg.com/) to manage this project. First, start by installing the project
 dependencies from inside the project directory `app-template-vite`.
 
 ```bash
@@ -24,7 +24,7 @@ You should now be able to view the bare-bones app in your browser.
 For more information or to start developing an app, please take a look at our [developer guides](https://support.deskpro.com/en/guides/developers/apps/apps-1/anatomy-of-an-app).
 
 Testing
----
+-------
 
 We've included `jest` to run your tests. It will look anywhere in `/src` for test suite files ending in `.test.tsx`.
 
