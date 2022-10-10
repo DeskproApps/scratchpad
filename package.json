@@ -13,7 +13,7 @@
     "test:coverage": "cross-env NODE_OPTIONS=--max-old-space-size=1024 jest --maxWorkers=75% --coverage"
   },
   "dependencies": {
-    "@deskpro/app-sdk": "^1.1.9",
+    "@deskpro/app-sdk": "^1.2",
     "polished": "^4.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
