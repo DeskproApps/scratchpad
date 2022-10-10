@@ -535,12 +535,12 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@deskpro/app-sdk@^1.1.9":
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/@deskpro/app-sdk/-/app-sdk-1.1.10.tgz#6c34d61c15a637364334436c91f5adb85caac16b"
-  integrity sha512-m/yQ1QiLaZ4azRX0JkVnudJ7/0xyPuPto57WhrnhTBvBxjTZBnGb2Ztyn9kkjlNAcCaPkP8I7cAl+hjW1GzNcw==
+"@deskpro/app-sdk@^1.2":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@deskpro/app-sdk/-/app-sdk-1.2.0.tgz#cf69556d5fbb25a1b565afcb26a4da34e81b48bc"
+  integrity sha512-cmfyeItVRfYi9wr7Mz4Q9Dm9u5f6xgyRL4lD+IsqQBGXJsmgJlFoRf9Ft/qCiTEZbbQoHMUgY6PKLCrNai8zCQ==
   dependencies:
-    "@deskpro/deskpro-ui" "^2.5.1"
+    "@deskpro/deskpro-ui" "^4.1"
     "@fortawesome/fontawesome-svg-core" "^6.1.0"
     "@fortawesome/free-brands-svg-icons" "^6.1.0"
     "@fortawesome/free-regular-svg-icons" "^6.1.0"
@@ -554,10 +554,10 @@
     shortcut-buttons-flatpickr "0.4.0"
     tslib "2.3.1"
 
-"@deskpro/deskpro-ui@^2.5.1":
-  version "2.9.1"
-  resolved "https://registry.yarnpkg.com/@deskpro/deskpro-ui/-/deskpro-ui-2.9.1.tgz#2d60b8a31a3e303c862c20ae2328c033059ab3e9"
-  integrity sha512-VnahvWSY4tKeumUCgGEKJPX5+VxHrlYeo0vAKsID02bWMwc2s+2qSDwJlAE07i6Z+f9tFgA7/+hcNFRR71COQA==
+"@deskpro/deskpro-ui@^4.1":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@deskpro/deskpro-ui/-/deskpro-ui-4.1.0.tgz#a58cf4b4b38611bd32317915bfa28421ac2072eb"
+  integrity sha512-Ziaw3/AQI/p4VfWUngSU/bYTvf27kUlc7o9B+ULyZGxBqqJl5ZsmElEcdHMWx92aSunlGS72/i7GoMKyMh8y+w==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^6.1.0"
     "@fortawesome/free-solid-svg-icons" "^6.1.0"
