@@ -1,35 +1,9 @@
-Scratchpad
-==============
+<img align="right" alt="Deskpro" src="https://raw.githubusercontent.com/DeskproApps/scratchpad/master/docs/assets/deskpro-logo.svg" />
 
-TODO: This app is a notepad which is available to view and edit while in all parts of Deskpro
+# Scratchpad App
 
-Basic Usage
------------
+This app is a notepad which is available to view and edit while in all parts of Deskpro
 
-We recommend using [Yarn](https://yarnpkg.com/) to manage this project. First, start by installing the project
-dependencies from inside the project directory `app-template-vite`.
+![Scratchpad App - Deskpro](https://raw.githubusercontent.com/DeskproApps/scratchpad/master/docs/assets/scratchpad_screenshot_01.png)
 
-```bash
-yarn install
-```
-
-Then, run the development server.
-
-```bash
-yarn start
-```
-
-You should now be able to view the bare-bones app in your browser.
-
-For more information or to start developing an app, please take a look at our [developer guides](https://support.deskpro.com/en/guides/developers/apps/apps-1/anatomy-of-an-app).
-
-Testing
--------
-
-We've included `jest` to run your tests. It will look anywhere in `/src` for test suite files ending in `.test.tsx`.
-
-You can run all tests using:
-
-```bash
-yarn test
-```
+[Find out more about our Scratchpad App](https://www.deskpro.com/apps/scratchpad)
