@@ -20,14 +20,7 @@ export default defineConfig({
           ],
         }),
       ],
-      external: [
-        "flatpickr/dist/themes/light.css",
-        "tippy.js/dist/tippy.css",
-        "simplebar/dist/simplebar.min.css",
-        "@deskpro/deskpro-ui/dist/deskpro-ui.css",
-        "@deskpro/deskpro-ui/dist/deskpro-custom-icons.css",
-        "react-resize-observer",
-      ],
+      external: ["react-resize-observer"],
     },
   },
 });
