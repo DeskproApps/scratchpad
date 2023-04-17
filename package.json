@@ -10,7 +10,8 @@
     "serve": "vite preview",
     "lint": "eslint --max-warnings 0 --ext ts,tsx ./src",
     "test": "cross-env NODE_OPTIONS=--max-old-space-size=1024 jest --maxWorkers=75%",
-    "test:coverage": "cross-env NODE_OPTIONS=--max-old-space-size=1024 jest --maxWorkers=75% --coverage"
+    "test:coverage": "cross-env NODE_OPTIONS=--max-old-space-size=1024 jest --maxWorkers=75% --coverage",
+    "bumpManifestVer": "node ./bin/bumpManifestVer.js"
   },
   "dependencies": {
     "@deskpro/app-sdk": "^1.2",
