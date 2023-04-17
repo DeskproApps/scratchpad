@@ -20,7 +20,6 @@ export default defineConfig({
           ],
         }),
       ],
-      external: ["react-resize-observer"],
     },
   },
 });

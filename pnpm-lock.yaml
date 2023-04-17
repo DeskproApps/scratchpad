@@ -2,6 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@deskpro/app-sdk': ^1.2
+  '@deskpro/deskpro-ui': ^6.1.0
   '@heroicons/react': 1.0.6
   '@testing-library/jest-dom': ^5.16.1
   '@testing-library/react': ^12.1.2
@@ -23,6 +24,7 @@ specifiers:
   prettier: ^2.8.7
   react: ^17.0.2
   react-dom: ^17.0.2
+  react-resize-observer: ^1.1.1
   rimraf: ^3.0.2
   rollup-plugin-copy: 3.4.0
   slugify: ^1.6.5
@@ -33,10 +35,12 @@ specifiers:
 
 dependencies:
   '@deskpro/app-sdk': 1.2.14_5939df5923238efb947d015b67dbc74c
+  '@deskpro/deskpro-ui': 6.6.0_1dce9479c9b6346160d88fc8e742f2cd
   '@heroicons/react': 1.0.6_react@17.0.2
   polished: 4.2.2
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
+  react-resize-observer: 1.1.1_react@17.0.2
 
 devDependencies:
   '@testing-library/jest-dom': 5.16.5
@@ -536,6 +540,43 @@ packages:
       csstype: 3.1.2
       formik: 2.2.9_react@17.0.2
       framer-motion: 6.5.1_react-dom@17.0.2+react@17.0.2
+      pretty-bytes: 6.1.0
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      react-highlight-words: 0.17.0_react@17.0.2
+      react-is: 17.0.2
+      react-popper: 2.3.0_84e36534eeb1331f0cfaecb5e6954d78
+      simplebar: 5.3.9
+      simplebar-react: 2.4.3_react-dom@17.0.2+react@17.0.2
+      styled-components: 5.3.9_react-dom@17.0.2+react@17.0.2
+      tippy.js: 6.3.7
+      ts-pattern: 4.2.2
+      tslib: 2.4.1
+      type-fest: 2.19.0
+      use-debounce: 7.0.1_react@17.0.2
+      uuid: 8.3.2
+    dev: false
+
+  /@deskpro/deskpro-ui/6.6.0_1dce9479c9b6346160d88fc8e742f2cd:
+    resolution: {integrity: sha512-I6AS0A1MUmo17yYCLEDpPVGi5Hy4GAsfRZJfgNcuLiA5dtBGrQPNG0dmsqLxE9AgXWY4l0zbvQOXSxhrTI//gQ==}
+    engines: {node: ^16.0.0}
+    peerDependencies:
+      '@typescript/lib-dom': npm:@types/web
+      react: ^18
+      react-dom: ^18
+      styled-components: ^5
+    dependencies:
+      '@fortawesome/fontawesome-svg-core': 6.4.0
+      '@fortawesome/free-solid-svg-icons': 6.4.0
+      '@fortawesome/react-fontawesome': 0.1.19_cd264d80646e036b39bccbdbe165556d
+      '@heroicons/react': 1.0.6_react@17.0.2
+      '@popperjs/core': 2.11.7
+      '@tippyjs/react': 4.2.6_react-dom@17.0.2+react@17.0.2
+      csstype: 3.1.2
+      d3-hierarchy: 3.1.2
+      formik: 2.2.9_react@17.0.2
+      framer-motion: 6.5.1_react-dom@17.0.2+react@17.0.2
+      lodash: 4.17.21
       pretty-bytes: 6.1.0
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
@@ -1925,6 +1966,11 @@ packages:
 
   /csstype/3.1.2:
     resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
+
+  /d3-hierarchy/3.1.2:
+    resolution: {integrity: sha512-FX/9frcub54beBdugHjDCdikxThEqjnR93Qt7PvQTOHxyiNCAlvMrHhclk3cD5VeAaq9fxmfRp+CnWw9rEMBuA==}
+    engines: {node: '>=12'}
+    dev: false
 
   /data-urls/2.0.0:
     resolution: {integrity: sha512-X5eWTSXO/BJmpdIKCRuKUgSCgAN0OwliVK3yPKbwIWU1Tdw5BRajxlzMidvh+gwko9AfQ9zIj52pzF91Q3YAvQ==}
@@ -4357,6 +4403,14 @@ packages:
     resolution: {integrity: sha512-XP8A9BT0CpRBD+NYLLeIhld/RqG9+gktUjW1FkE+Vm7OCinbG1SshcK5tb9ls4kzvjZr9mOQc7HYgBngEyPAXg==}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /react-resize-observer/1.1.1_react@17.0.2:
+    resolution: {integrity: sha512-3R+90Hou90Mr3wJYc+unsySC8Pn91V4nmjO32NKvUvjphRUbq9HisyLg7bDyGBE7xlMrrM6Fax7iNQaFdc/FYA==}
+    peerDependencies:
+      react: '>=0.14'
+    dependencies:
+      react: 17.0.2
+    dev: false
 
   /react/17.0.2:
     resolution: {integrity: sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==}
