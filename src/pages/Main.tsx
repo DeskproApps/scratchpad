@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { GetStateResponse, TextArea } from "@deskpro/app-sdk";
+import { GetStateResponse } from "@deskpro/app-sdk";
 import {
   Stack,
   Button,
@@ -8,7 +8,8 @@ import {
   useDeskproAppClient,
 } from "@deskpro/app-sdk";
 import { useState } from "react";
-
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
 import useDebounce from "../utils/debounce";
 
 export const Main = () => {
@@ -49,24 +50,15 @@ export const Main = () => {
   return (
     <Stack gap={10} vertical>
       {ranFirstTime && (
-        <TextArea
-          variant="inline"
+        <ReactQuill
+          style={{ height: "300px", border: "0px" }}
+          theme="snow"
           value={text}
-          onChange={(e) => setText(e.target.value)}
-          placeholder="Enter text here..."
-          style={{
-            resize: "none",
-            minHeight: "10em",
-            maxHeight: "100%",
-            height: !text ? "10em" : "auto",
-            width: "100%",
-            border: "none",
-            overflow: "hidden",
-          }}
+          onChange={setText}
         />
       )}
 
-      <div style={{ width: "100%" }}>
+      <div style={{ width: "100%", marginTop: "50px" }}>
         <div
           style={{
             content: " ",
