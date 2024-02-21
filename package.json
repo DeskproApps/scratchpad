@@ -48,7 +48,7 @@
     "prettier": "^2.8.7",
     "rimraf": "^3.0.2",
     "rollup-plugin-copy": "3.4.0",
-    "semver": "7.5.2",
+    "semver": "7.5.3",
     "slugify": "^1.6.5",
     "styled-components": "^5.3.5",
     "ts-jest": "^27.1.2",
