@@ -28,6 +28,8 @@ export const Main = () => {
         setDebouncedValue(res[0]?.data ?? "");
         setRanFirstTime(true);
       });
+
+    client.setHeight(420);
   });
 
   useInitialisedDeskproAppClient(
@@ -51,7 +53,7 @@ export const Main = () => {
     <Stack gap={10} vertical>
       {ranFirstTime && (
         <ReactQuill
-          style={{ height: "300px", border: "0px" }}
+          style={{ height: "300px", border: "0px", marginLeft: "4px" }}
           theme="snow"
           value={text}
           onChange={setText}
