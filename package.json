@@ -15,8 +15,8 @@
   },
   "dependencies": {
     "@adobe/css-tools": "4.3.2",
-    "@deskpro/app-sdk": "^1.2",
-    "@deskpro/deskpro-ui": "^6.1.0",
+    "@deskpro/app-sdk": "^2.1.13",
+    "@deskpro/deskpro-ui": "^7.18.4",
     "@heroicons/react": "1.0.6",
     "polished": "^4.1.1",
     "react": "^17.0.2",

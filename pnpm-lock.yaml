@@ -9,11 +9,11 @@ dependencies:
     specifier: 4.3.2
     version: 4.3.2
   '@deskpro/app-sdk':
-    specifier: ^1.2
-    version: 1.2.14(@types/web@0.0.139)(react-dom@17.0.2)(react@17.0.2)(styled-components@5.3.9)(typescript@4.9.5)
+    specifier: ^2.1.13
+    version: 2.1.13(@deskpro/deskpro-ui@7.18.4)(@types/react-dom@17.0.19)(@types/react@17.0.58)(react-dom@17.0.2)(react-is@18.2.0)(react@17.0.2)(typescript@4.9.5)
   '@deskpro/deskpro-ui':
-    specifier: ^6.1.0
-    version: 6.6.0(@types/web@0.0.139)(react-dom@17.0.2)(react@17.0.2)(styled-components@5.3.9)
+    specifier: ^7.18.4
+    version: 7.18.4(@types/web@0.0.139)(react-dom@17.0.2)(react@17.0.2)(styled-components@5.3.9)
   '@heroicons/react':
     specifier: 1.0.6
     version: 1.0.6(react@17.0.2)
@@ -140,6 +140,7 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/highlight': 7.18.6
+    dev: true
 
   /@babel/code-frame@7.23.5:
     resolution: {integrity: sha512-CgH3s1a96LipHCmSUmYFPwY7MNx8C3avkq7i4Wl3cfa662ldtUe4VM1TPXX70pfmrlWTb6jLqTYrZyT2ZTJBgA==}
@@ -323,6 +324,7 @@ packages:
       '@babel/helper-validator-identifier': 7.19.1
       chalk: 2.4.2
       js-tokens: 4.0.0
+    dev: true
 
   /@babel/highlight@7.23.4:
     resolution: {integrity: sha512-acGdbYSfp2WheJoJm/EBBBLh/ID8KDc64ISZ9DYtBmC8/Q204PZJLHyzeB5qMzJ5trcOkybd78M4x2KWsUq++A==}
@@ -580,23 +582,27 @@ packages:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: true
 
-  /@deskpro/app-sdk@1.2.14(@types/web@0.0.139)(react-dom@17.0.2)(react@17.0.2)(styled-components@5.3.9)(typescript@4.9.5):
-    resolution: {integrity: sha512-sPsGXA5v2jB9Mim0zVAP7OfeG1KmhPGpD5+x4WbHDBXK8fX6AutR41LML+Znt8MUXO4UzVyadEj/syU83aG+QQ==}
+  /@deskpro/app-sdk@2.1.13(@deskpro/deskpro-ui@7.18.4)(@types/react-dom@17.0.19)(@types/react@17.0.58)(react-dom@17.0.2)(react-is@18.2.0)(react@17.0.2)(typescript@4.9.5):
+    resolution: {integrity: sha512-YAntcA5Zj8jDCnYRBb0UvWMKrQ7JZHg83Izm03ImlCE6CARIt3HqVcZTJofibGWWTXFNnOiXLthEUKd7PxOtsQ==}
     engines: {node: ^16.0.0}
     peerDependencies:
-      react: ^17 || ^18
-      react-dom: ^17 || ^18
-      styled-components: ^5
+      '@deskpro/deskpro-ui': ^7
+      '@types/react': ^18
+      '@types/react-dom': ^18
+      react: ^18
+      react-dom: ^18
     dependencies:
-      '@deskpro/deskpro-ui': 4.7.0(@types/web@0.0.139)(react-dom@17.0.2)(react@17.0.2)(styled-components@5.3.9)
+      '@deskpro/deskpro-ui': 7.18.4(@types/web@0.0.139)(react-dom@17.0.2)(react@17.0.2)(styled-components@5.3.9)
       '@fortawesome/fontawesome-svg-core': 6.4.0
       '@fortawesome/free-brands-svg-icons': 6.4.0
       '@fortawesome/free-regular-svg-icons': 6.4.0
       '@fortawesome/free-solid-svg-icons': 6.4.0
       '@fortawesome/react-fontawesome': 0.1.19(@fortawesome/fontawesome-svg-core@6.4.0)(react@17.0.2)
-      '@tanstack/react-query': 4.29.3(react-dom@17.0.2)(react@17.0.2)
-      '@types/jest': 29.5.0
-      fast-check: 3.8.0
+      '@tanstack/react-query': 4.36.1(react-dom@17.0.2)(react@17.0.2)
+      '@types/jest': 29.5.12
+      '@types/react': 17.0.58
+      '@types/react-dom': 17.0.19
+      fast-check: 3.16.0
       flatpickr: 4.6.13
       handlebars: 4.7.7
       modern-normalize: 1.1.0
@@ -608,53 +614,17 @@ packages:
       react-intl: 5.25.1(react@17.0.2)(typescript@4.9.5)
       regenerator-runtime: 0.13.9
       shortcut-buttons-flatpickr: 0.4.0
-      styled-components: 5.3.9(react-dom@17.0.2)(react-is@18.2.0)(react@17.0.2)
-      ts-pattern: 4.2.2
+      styled-components: 5.3.11(react-dom@17.0.2)(react-is@18.2.0)(react@17.0.2)
+      ts-pattern: 4.3.0
       tslib: 2.3.1
     transitivePeerDependencies:
-      - '@typescript/lib-dom'
+      - react-is
       - react-native
       - typescript
     dev: false
 
-  /@deskpro/deskpro-ui@4.7.0(@types/web@0.0.139)(react-dom@17.0.2)(react@17.0.2)(styled-components@5.3.9):
-    resolution: {integrity: sha512-YtsETDNhHy8fT11juymxz1dwI4VRCnMCkXj4pzkLadHu7p3NhJ+5oMGUyH9IMuUUqnXiFteOzw+kS3WdZxfNZw==}
-    engines: {node: ^16.0.0}
-    peerDependencies:
-      '@typescript/lib-dom': npm:@types/web
-      react: ^17 || ^18
-      react-dom: ^17 || ^18
-      styled-components: ^5
-    dependencies:
-      '@fortawesome/fontawesome-svg-core': 6.4.0
-      '@fortawesome/free-solid-svg-icons': 6.4.0
-      '@fortawesome/react-fontawesome': 0.1.19(@fortawesome/fontawesome-svg-core@6.4.0)(react@17.0.2)
-      '@heroicons/react': 1.0.6(react@17.0.2)
-      '@popperjs/core': 2.11.7
-      '@tippyjs/react': 4.2.6(react-dom@17.0.2)(react@17.0.2)
-      '@typescript/lib-dom': /@types/web@0.0.139
-      csstype: 3.1.2
-      formik: 2.2.9(react@17.0.2)
-      framer-motion: 6.5.1(react-dom@17.0.2)(react@17.0.2)
-      pretty-bytes: 6.1.0
-      react: 17.0.2
-      react-dom: 17.0.2(react@17.0.2)
-      react-highlight-words: 0.17.0(react@17.0.2)
-      react-is: 17.0.2
-      react-popper: 2.3.0(@popperjs/core@2.11.7)(react-dom@17.0.2)(react@17.0.2)
-      simplebar: 5.3.9
-      simplebar-react: 2.4.3(react-dom@17.0.2)(react@17.0.2)
-      styled-components: 5.3.9(react-dom@17.0.2)(react-is@18.2.0)(react@17.0.2)
-      tippy.js: 6.3.7
-      ts-pattern: 4.2.2
-      tslib: 2.4.1
-      type-fest: 2.19.0
-      use-debounce: 7.0.1(react@17.0.2)
-      uuid: 8.3.2
-    dev: false
-
-  /@deskpro/deskpro-ui@6.6.0(@types/web@0.0.139)(react-dom@17.0.2)(react@17.0.2)(styled-components@5.3.9):
-    resolution: {integrity: sha512-I6AS0A1MUmo17yYCLEDpPVGi5Hy4GAsfRZJfgNcuLiA5dtBGrQPNG0dmsqLxE9AgXWY4l0zbvQOXSxhrTI//gQ==}
+  /@deskpro/deskpro-ui@7.18.4(@types/web@0.0.139)(react-dom@17.0.2)(react@17.0.2)(styled-components@5.3.9):
+    resolution: {integrity: sha512-Muk20cybVB/tGhekxf2swuE3YxHc7Jk1u+SDscuNg6LD59p6s1mYFC1HJPCv1M22CM/KFWe8m/5n5DIules8jg==}
     engines: {node: ^16.0.0}
     peerDependencies:
       '@typescript/lib-dom': npm:@types/web
@@ -749,7 +719,7 @@ packages:
     resolution: {integrity: sha512-EBikYFp2JCdIfGEb5G9dyCkTGDmC57KSHhRQOC3aYxoPWVZvfWCDjZwkGYHN7Lis/fmuWl906bnNTJifDQ3sXw==}
     dependencies:
       '@formatjs/intl-localematcher': 0.2.25
-      tslib: 2.3.1
+      tslib: 2.4.1
     dev: false
 
   /@formatjs/fast-memoize@1.2.1:
@@ -763,7 +733,7 @@ packages:
     dependencies:
       '@formatjs/ecma402-abstract': 1.11.4
       '@formatjs/icu-skeleton-parser': 1.3.6
-      tslib: 2.3.1
+      tslib: 2.4.1
     dev: false
 
   /@formatjs/icu-skeleton-parser@1.3.6:
@@ -778,7 +748,7 @@ packages:
     dependencies:
       '@formatjs/ecma402-abstract': 1.11.4
       '@formatjs/intl-localematcher': 0.2.25
-      tslib: 2.3.1
+      tslib: 2.4.1
     dev: false
 
   /@formatjs/intl-listformat@6.5.3:
@@ -786,7 +756,7 @@ packages:
     dependencies:
       '@formatjs/ecma402-abstract': 1.11.4
       '@formatjs/intl-localematcher': 0.2.25
-      tslib: 2.3.1
+      tslib: 2.4.1
     dev: false
 
   /@formatjs/intl-localematcher@0.2.25:
@@ -809,7 +779,7 @@ packages:
       '@formatjs/intl-displaynames': 5.4.3
       '@formatjs/intl-listformat': 6.5.3
       intl-messageformat: 9.13.0
-      tslib: 2.3.1
+      tslib: 2.4.1
       typescript: 4.9.5
     dev: false
 
@@ -1246,12 +1216,12 @@ packages:
       '@sinonjs/commons': 1.8.6
     dev: true
 
-  /@tanstack/query-core@4.29.1:
-    resolution: {integrity: sha512-vkPewLEG8ua0efo3SsVT0BcBtkq5RZX8oPhDAyKL+k/rdOYSQTEocfGEXSaBwIwsXeOGBUpfKqI+UmHvNqdWXg==}
+  /@tanstack/query-core@4.36.1:
+    resolution: {integrity: sha512-DJSilV5+ytBP1FbFcEJovv4rnnm/CokuVvrBEtW/Va9DvuJ3HksbXUJEpI0aV1KtuL4ZoO9AVE6PyNLzF7tLeA==}
     dev: false
 
-  /@tanstack/react-query@4.29.3(react-dom@17.0.2)(react@17.0.2):
-    resolution: {integrity: sha512-FPQrMu7PbCgBcVzoRJm7WmQnAFv+LUgZM9KBZ7Vk/+yERH2BDLvQRuAgczQd5Tb1s3HbOktECRDaOkUxdyBAjw==}
+  /@tanstack/react-query@4.36.1(react-dom@17.0.2)(react@17.0.2):
+    resolution: {integrity: sha512-y7ySVHFyyQblPl3J3eQBWpXZkliroki3ARnBKsdJchlgt7yJLRDUcf4B8soufgiYt3pEQIkBWBx1N9/ZPIeUWw==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -1262,7 +1232,7 @@ packages:
       react-native:
         optional: true
     dependencies:
-      '@tanstack/query-core': 4.29.1
+      '@tanstack/query-core': 4.36.1
       react: 17.0.2
       react-dom: 17.0.2(react@17.0.2)
       use-sync-external-store: 1.2.0(react@17.0.2)
@@ -1405,8 +1375,8 @@ packages:
       pretty-format: 27.5.1
     dev: true
 
-  /@types/jest@29.5.0:
-    resolution: {integrity: sha512-3Emr5VOl/aoBwnWcH/EFQvlSAmjV+XtV9GGu5mwdYew5vhQh0IUZx/60x0TzHDu09Bi7HMx10t/namdJw5QIcg==}
+  /@types/jest@29.5.12:
+    resolution: {integrity: sha512-eDC8bTvT/QhYdxJAulQikueigY5AsdBRH2yDKW3yveW7svY3+DzN84/2NUgkw10RTiJbWqZrTtoGVdYlvFJdLw==}
     dependencies:
       expect: 29.5.0
       pretty-format: 29.5.0
@@ -1434,7 +1404,6 @@ packages:
     resolution: {integrity: sha512-PiYG40pnQRdPHnlf7tZnp0aQ6q9tspYr72vD61saO6zFCybLfMqwUCN0va1/P+86DXn18ZWeW30Bk7xlC5eEAQ==}
     dependencies:
       '@types/react': 17.0.58
-    dev: true
 
   /@types/react@17.0.58:
     resolution: {integrity: sha512-c1GzVY97P0fGxwGxhYq989j4XwlcHQoto6wQISOC2v6wm3h0PORRWJFHlkRjfGsiG3y1609WdQ+J+tKxvrEd6A==}
@@ -1774,6 +1743,19 @@ packages:
       '@types/babel__core': 7.20.0
       '@types/babel__traverse': 7.18.3
     dev: true
+
+  /babel-plugin-styled-components@2.1.1(styled-components@5.3.11):
+    resolution: {integrity: sha512-c8lJlszObVQPguHkI+akXv8+Jgb9Ccujx0EetL7oIvwU100LxO6XAGe45qry37wUL40a5U9f23SYrivro2XKhA==}
+    peerDependencies:
+      styled-components: '>= 2'
+    dependencies:
+      '@babel/helper-annotate-as-pure': 7.18.6
+      '@babel/helper-module-imports': 7.21.4
+      babel-plugin-syntax-jsx: 6.18.0
+      lodash: 4.17.21
+      picomatch: 2.3.1
+      styled-components: 5.3.11(react-dom@17.0.2)(react-is@18.2.0)(react@17.0.2)
+    dev: false
 
   /babel-plugin-styled-components@2.1.1(styled-components@5.3.9):
     resolution: {integrity: sha512-c8lJlszObVQPguHkI+akXv8+Jgb9Ccujx0EetL7oIvwU100LxO6XAGe45qry37wUL40a5U9f23SYrivro2XKhA==}
@@ -2646,8 +2628,8 @@ packages:
       jest-util: 29.5.0
     dev: false
 
-  /fast-check@3.8.0:
-    resolution: {integrity: sha512-Mz6k/+bton0iMXdIaqG/ow81oUCYxIDtmGUvf1Q/9O5QhiLI6T9JaCNEr4Y6LfMOpY/jBUfo8hK+3qd5sGfTfw==}
+  /fast-check@3.16.0:
+    resolution: {integrity: sha512-k8GtQHi4pJoRQ1gVDFQno+/FVkowo/ehiz/aCj9O/D7HRWb1sSFzNrw+iPVU8QlWtH+jNwbuN+dDVg3QkS56DQ==}
     engines: {node: '>=8.0.0'}
     dependencies:
       pure-rand: 6.0.1
@@ -3081,7 +3063,7 @@ packages:
       '@formatjs/ecma402-abstract': 1.11.4
       '@formatjs/fast-memoize': 1.2.1
       '@formatjs/icu-messageformat-parser': 2.1.0
-      tslib: 2.3.1
+      tslib: 2.4.1
     dev: false
 
   /is-arguments@1.1.1:
@@ -3575,7 +3557,7 @@ packages:
     resolution: {integrity: sha512-Kijeg9Dag6CKtIDA7O21zNTACqD5MD/8HfIV8pdD94vFyFuer52SigdC3IQMhab3vACxXMiFk+yMHNdbqtyTGA==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
-      '@babel/code-frame': 7.21.4
+      '@babel/code-frame': 7.23.5
       '@jest/types': 29.5.0
       '@types/stack-utils': 2.0.1
       chalk: 4.1.2
@@ -4434,7 +4416,7 @@ packages:
       hoist-non-react-statics: 3.3.2
       intl-messageformat: 9.13.0
       react: 17.0.2
-      tslib: 2.3.1
+      tslib: 2.4.1
       typescript: 4.9.5
     dev: false
 
@@ -4774,6 +4756,29 @@ packages:
       tslib: 2.4.1
     dev: false
 
+  /styled-components@5.3.11(react-dom@17.0.2)(react-is@18.2.0)(react@17.0.2):
+    resolution: {integrity: sha512-uuzIIfnVkagcVHv9nE0VPlHPSCmXIUGKfJ42LNjxCCTDTL5sgnJ8Z7GZBq0EnLYGln77tPpEpExt2+qa+cZqSw==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>= 16.8.0'
+      react-dom: '>= 16.8.0'
+      react-is: '>= 16.8.0'
+    dependencies:
+      '@babel/helper-module-imports': 7.21.4
+      '@babel/traverse': 7.23.2(supports-color@5.5.0)
+      '@emotion/is-prop-valid': 1.2.0
+      '@emotion/stylis': 0.8.5
+      '@emotion/unitless': 0.7.5
+      babel-plugin-styled-components: 2.1.1(styled-components@5.3.11)
+      css-to-react-native: 3.2.0
+      hoist-non-react-statics: 3.3.2
+      react: 17.0.2
+      react-dom: 17.0.2(react@17.0.2)
+      react-is: 18.2.0
+      shallowequal: 1.1.0
+      supports-color: 5.5.0
+    dev: false
+
   /styled-components@5.3.9(react-dom@17.0.2)(react-is@18.2.0)(react@17.0.2):
     resolution: {integrity: sha512-Aj3kb13B75DQBo2oRwRa/APdB5rSmwUfN5exyarpX+x/tlM/rwZA2vVk2vQgVSP6WKaZJHWwiFrzgHt+CLtB4A==}
     engines: {node: '>=10'}
@@ -4938,6 +4943,10 @@ packages:
 
   /ts-pattern@4.2.2:
     resolution: {integrity: sha512-qzJMo2pbkUJWusRH5o8xR+xogn6RmvViyUgwBFTtRENLse470clCGjHDf6haWGZ1AOmk8XkEohUoBW8Uut6Scg==}
+    dev: false
+
+  /ts-pattern@4.3.0:
+    resolution: {integrity: sha512-pefrkcd4lmIVR0LA49Imjf9DYLK8vtWhqBPA3Ya1ir8xCW0O2yjL9dsCVvI7pCodLC5q7smNpEtDR2yVulQxOg==}
     dev: false
 
   /tslib@1.14.1:

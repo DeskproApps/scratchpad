@@ -1,9 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { GetStateResponse, TextArea } from "@deskpro/app-sdk";
+import { Stack, Button, H1, TextArea } from "@deskpro/deskpro-ui";
 import {
-  Stack,
-  Button,
-  H1,
+  GetStateResponse,
   useInitialisedDeskproAppClient,
   useDeskproAppClient,
 } from "@deskpro/app-sdk";
