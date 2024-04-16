@@ -9,11 +9,11 @@ dependencies:
     specifier: 4.3.2
     version: 4.3.2
   '@deskpro/app-sdk':
-    specifier: 3.0.19
-    version: 3.0.19(@deskpro/deskpro-ui@6.6.0)(@types/react-dom@17.0.19)(@types/react@17.0.58)(react-dom@17.0.2)(react-is@18.2.0)(react@17.0.2)(typescript@4.9.5)
+    specifier: ^2.1.13
+    version: 2.1.14(@deskpro/deskpro-ui@7.18.5)(@types/react-dom@17.0.19)(@types/react@17.0.58)(react-dom@17.0.2)(react-is@18.2.0)(react@17.0.2)(typescript@4.9.5)
   '@deskpro/deskpro-ui':
-    specifier: ^6.1.0
-    version: 6.6.0(@types/web@0.0.139)(react-dom@17.0.2)(react@17.0.2)(styled-components@5.3.9)
+    specifier: ^7.18.4
+    version: 7.18.5(@types/web@0.0.139)(react-dom@17.0.2)(react@17.0.2)(styled-components@5.3.9)
   '@heroicons/react':
     specifier: 1.0.6
     version: 1.0.6(react@17.0.2)
@@ -116,8 +116,8 @@ devDependencies:
     specifier: ^4.4.4
     version: 4.9.5
   vite:
-    specifier: ^2.9.17
-    version: 2.9.17
+    specifier: ^2.9.18
+    version: 2.9.18
 
 packages:
 
@@ -551,8 +551,8 @@ packages:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: true
 
-  /@deskpro/app-sdk@3.0.19(@deskpro/deskpro-ui@6.6.0)(@types/react-dom@17.0.19)(@types/react@17.0.58)(react-dom@17.0.2)(react-is@18.2.0)(react@17.0.2)(typescript@4.9.5):
-    resolution: {integrity: sha512-z1/IMH8+WRrMGzWqA0Kj+O9z4/bzhMVdor5VbQuM22lvM5Q29mXHKgshL8+GDzVrdkmiAfp+sB4yFE92mZqhMw==}
+  /@deskpro/app-sdk@2.1.14(@deskpro/deskpro-ui@7.18.5)(@types/react-dom@17.0.19)(@types/react@17.0.58)(react-dom@17.0.2)(react-is@18.2.0)(react@17.0.2)(typescript@4.9.5):
+    resolution: {integrity: sha512-qplw2dYQMLEbMducAKfowt/tgdDWwYL4pJEZvuMnwWal3EoeFCkqXYbPt/PSdakESw7s0OTlB66ugeTkQvoYoQ==}
     engines: {node: ^16.0.0}
     peerDependencies:
       '@deskpro/deskpro-ui': ^7
@@ -561,7 +561,7 @@ packages:
       react: ^18
       react-dom: ^18
     dependencies:
-      '@deskpro/deskpro-ui': 6.6.0(@types/web@0.0.139)(react-dom@17.0.2)(react@17.0.2)(styled-components@5.3.9)
+      '@deskpro/deskpro-ui': 7.18.5(@types/web@0.0.139)(react-dom@17.0.2)(react@17.0.2)(styled-components@5.3.9)
       '@fortawesome/fontawesome-svg-core': 6.4.0
       '@fortawesome/free-brands-svg-icons': 6.4.0
       '@fortawesome/free-regular-svg-icons': 6.4.0
@@ -592,8 +592,8 @@ packages:
       - typescript
     dev: false
 
-  /@deskpro/deskpro-ui@6.6.0(@types/web@0.0.139)(react-dom@17.0.2)(react@17.0.2)(styled-components@5.3.9):
-    resolution: {integrity: sha512-I6AS0A1MUmo17yYCLEDpPVGi5Hy4GAsfRZJfgNcuLiA5dtBGrQPNG0dmsqLxE9AgXWY4l0zbvQOXSxhrTI//gQ==}
+  /@deskpro/deskpro-ui@7.18.5(@types/web@0.0.139)(react-dom@17.0.2)(react@17.0.2)(styled-components@5.3.9):
+    resolution: {integrity: sha512-bexU+XV4C1SKmJAy21jSzWHyiuNvADBdcDXrYkRVQaAF5oqUrDsk6zXCxfTZH7tfAP0AVhMfANKBl32AyH4t/A==}
     engines: {node: ^16.0.0}
     peerDependencies:
       '@typescript/lib-dom': npm:@types/web
@@ -623,7 +623,7 @@ packages:
       simplebar-react: 2.4.3(react-dom@17.0.2)(react@17.0.2)
       styled-components: 5.3.9(react-dom@17.0.2)(react-is@18.2.0)(react@17.0.2)
       tippy.js: 6.3.7
-      ts-pattern: 4.2.2
+      ts-pattern: 4.3.0
       tslib: 2.4.1
       type-fest: 2.19.0
       use-debounce: 7.0.1(react@17.0.2)
@@ -5052,10 +5052,6 @@ packages:
       yargs-parser: 20.2.9
     dev: true
 
-  /ts-pattern@4.2.2:
-    resolution: {integrity: sha512-qzJMo2pbkUJWusRH5o8xR+xogn6RmvViyUgwBFTtRENLse470clCGjHDf6haWGZ1AOmk8XkEohUoBW8Uut6Scg==}
-    dev: false
-
   /ts-pattern@4.3.0:
     resolution: {integrity: sha512-pefrkcd4lmIVR0LA49Imjf9DYLK8vtWhqBPA3Ya1ir8xCW0O2yjL9dsCVvI7pCodLC5q7smNpEtDR2yVulQxOg==}
     dev: false
@@ -5203,8 +5199,8 @@ packages:
       source-map: 0.7.4
     dev: true
 
-  /vite@2.9.17:
-    resolution: {integrity: sha512-XxcRzra6d7xrKXH66jZUgb+srThoPu+TLJc06GifUyKq9JmjHkc1Numc8ra0h56rju2jfVWw3B3fs5l3OFMvUw==}
+  /vite@2.9.18:
+    resolution: {integrity: sha512-sAOqI5wNM9QvSEE70W3UGMdT8cyEn0+PmJMTFvTB8wB0YbYUWw3gUbY62AOyrXosGieF2htmeLATvNxpv/zNyQ==}
     engines: {node: '>=12.2.0'}
     hasBin: true
     peerDependencies:
