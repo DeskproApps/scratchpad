@@ -9,8 +9,8 @@ dependencies:
     specifier: 4.3.2
     version: 4.3.2
   '@deskpro/app-sdk':
-    specifier: ^3.0.20
-    version: 3.0.20(@deskpro/deskpro-ui@6.10.4)(@types/react-dom@17.0.19)(@types/react@17.0.58)(react-dom@17.0.2)(react-is@18.2.0)(react@17.0.2)(typescript@4.9.5)
+    specifier: ^3.0.15
+    version: 3.0.15(@deskpro/deskpro-ui@6.10.4)(@types/react-dom@17.0.19)(@types/react@17.0.58)(react-dom@17.0.2)(react-is@18.2.0)(react@17.0.2)(typescript@4.9.5)
   '@deskpro/deskpro-ui':
     specifier: ^6.1.0
     version: 6.10.4(@types/web@0.0.139)(react-dom@17.0.2)(react@17.0.2)(styled-components@5.3.9)
@@ -551,8 +551,8 @@ packages:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: true
 
-  /@deskpro/app-sdk@3.0.20(@deskpro/deskpro-ui@6.10.4)(@types/react-dom@17.0.19)(@types/react@17.0.58)(react-dom@17.0.2)(react-is@18.2.0)(react@17.0.2)(typescript@4.9.5):
-    resolution: {integrity: sha512-Qw9Hv+D5gawdk3yN9qhv38S0ua05GQjKDUN6LZKS8p2ttuisH69sLtFahxS83JpnMfuf34l4C4Ooiqomgd9S/g==}
+  /@deskpro/app-sdk@3.0.15(@deskpro/deskpro-ui@6.10.4)(@types/react-dom@17.0.19)(@types/react@17.0.58)(react-dom@17.0.2)(react-is@18.2.0)(react@17.0.2)(typescript@4.9.5):
+    resolution: {integrity: sha512-LkgXL8G3Ran9XdG2AhriUkLpesbkT6dVT+o8fBBQr5EiDtTL6Omh3dO07VSXabttr3x7rR0+1A4yo9A5wBk1IA==}
     engines: {node: ^16.0.0}
     peerDependencies:
       '@deskpro/deskpro-ui': ^7
