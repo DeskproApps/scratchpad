@@ -15,10 +15,9 @@
   },
   "dependencies": {
     "@adobe/css-tools": "4.3.2",
-    "@deskpro/app-sdk": "^3.0.15",
+    "@deskpro/app-sdk": "^3.0.20",
     "@deskpro/deskpro-ui": "^6.1.0",
     "@heroicons/react": "1.0.6",
-    "iframe-resizer": "^4.3.11",
     "polished": "^4.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
