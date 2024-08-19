@@ -3,7 +3,7 @@
   "title": "Scratchpad",
   "appStoreUrl": "https://www.deskpro.com/product-embed/apps/scratchpad",
   "description": "This app is a notepad which is available to view and edit while in all parts of Deskpro",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "scope": "agent",
   "hasDevMode": true,
   "isSingleInstall": false,
