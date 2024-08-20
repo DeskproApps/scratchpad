@@ -8,7 +8,7 @@ import { useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import useDebounce from "../utils/debounce";
-import { Button, H1, Scrollbar, Stack } from "@deskpro/deskpro-ui";
+import { Button, H1, Stack } from "@deskpro/deskpro-ui";
 
 export const Main = () => {
   const { client } = useDeskproAppClient();
