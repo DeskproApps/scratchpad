@@ -8,7 +8,7 @@ import { useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import useDebounce from "../utils/debounce";
-import { Button, H1, Stack } from "@deskpro/deskpro-ui";
+import { Button, H1, Scrollbar, Stack } from "@deskpro/deskpro-ui";
 
 export const Main = () => {
   const { client } = useDeskproAppClient();
@@ -48,16 +48,14 @@ export const Main = () => {
   return (
     <Stack gap={10} vertical style={{ height: '100%', width: '100%' }}>
       {ranFirstTime && (
-        <div style={{position: 'relative', height: "100%", width: "100%"}}>
-          <div style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 30 /** this is because Quill does height 100% and padding without box-sizing */}}>
-            <ReactQuill
-              style={{ border: "0px", height: "100%", width: "100%" }}
-              theme="snow"
-              value={text}
-              onChange={setText}
-            />
-          </div>
-        </div>
+        <Scrollbar style={{height: '100%', width: '100%'}}>
+          <ReactQuill
+            style={{ border: "0px", height: "100%", width: "100%" }}
+            theme="snow"
+            value={text}
+            onChange={setText}
+          />
+        </Scrollbar>
       )}
 
       <footer style={{ width: "100%", marginTop: "10px" }}>
