@@ -1,5 +1,18 @@
+html, body, #root, #root > div {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+#root {
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+* {
+  scrollbar-width: thin;
+}
+
 .ql-container.ql-snow {
   border: 0px;
-  max-width: 370px;
-  overflow: hidden;
 }
