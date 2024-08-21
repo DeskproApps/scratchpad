@@ -85,9 +85,9 @@ export const Main = () => {
             text="Clear"
           ></Button>
           {debouncedValue === text ? (
-            <H1 style={{ color: "#8B9293" }}>{saveStatus}</H1>
+            <H1 style={{ color: "#8B9293" }}>{saveStatus}&nbsp;</H1>
           ) : (
-            <H1 style={{ color: "#8B9293" }}>Typing...</H1>
+            <H1 style={{ color: "#8B9293" }}>Typing...&nbsp;</H1>
           )}
         </Stack>
       </footer>
