@@ -9,17 +9,13 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import useDebounce from "../utils/debounce";
 import { Button, H1, Scrollbar, Stack } from "@deskpro/deskpro-ui";
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage } from 'react-intl';
 
 export const Main = () => {
   const { client } = useDeskproAppClient();
-  const context = useDeskproLatestAppContext();
-  console.log({ context });
-  const t = '';
-
   const [text, setText] = useState<string>("");
   const [ranFirstTime, setRanFirstTime] = useState<boolean>(false);
-  const [saveStatus, setSaveStatus] = useState<"saved"|"saving">("saved");
+  const [saveStatus, setSaveStatus] = useState<"saved" | "saving">("saved");
   const { debouncedValue, setDebouncedValue } = useDebounce(text, 500);
 
   useInitialisedDeskproAppClient((client) => {
@@ -86,10 +82,10 @@ export const Main = () => {
               marginLeft: "3px",
             }}
             size="large"
-            text="Clear"
+            text={<FormattedMessage id="button.clear" />}
           />
           <H1 style={{ color: "#8B9293" }}>
-            <FormattedMessage id={debouncedValue === text ? `state.${saveStatus}` : "state.typing"}  />
+            <FormattedMessage id={debouncedValue === text ? `state.${saveStatus}` : "state.typing"} />
           </H1>
         </Stack>
       </footer>

@@ -1,5 +1,6 @@
 {
     "state.saved": "Guardado",
     "state.saving": "Guardando",
-    "state.typing": "Escribiendo..."
+    "state.typing": "Escribiendo...",
+    "button.clear": "Borrar"
 }
