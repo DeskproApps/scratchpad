@@ -1,6 +1,6 @@
 # My App Setup Instructions
 
-1. Build the package with yarn build:package
+1. Build the package with pnpm build:package
 2. Go on Admin -> Apps & Integration -> Apps -> Available Tab -> Upload App
 3. Select your package, which should be inside ./build
 4. Click the Scratchpad App, go on Setup and click Install at the bottom
