@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { GetStateResponse, useDeskproLatestAppContext } from "@deskpro/app-sdk";
+import { GetStateResponse } from "@deskpro/app-sdk";
 import {
   useInitialisedDeskproAppClient,
   useDeskproAppClient,
