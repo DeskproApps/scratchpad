@@ -44,7 +44,7 @@
     "eslint-plugin-react-hooks": "4.3.0",
     "jest": "^27.4.7",
     "postcss": "8.4.31",
-    "prettier": "^2.8.7",
+    "prettier": "^3.4.1",
     "rimraf": "^3.0.2",
     "rollup-plugin-copy": "3.4.0",
     "semver": "7.5.2",
