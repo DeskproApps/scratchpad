@@ -9,13 +9,13 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import useDebounce from "../utils/debounce";
 import { Button, H1, Scrollbar, Stack } from "@deskpro/deskpro-ui";
+import { FormattedMessage } from 'react-intl';
 
 export const Main = () => {
   const { client } = useDeskproAppClient();
-
   const [text, setText] = useState<string>("");
   const [ranFirstTime, setRanFirstTime] = useState<boolean>(false);
-  const [saveStatus, setSaveStatus] = useState<string>("Saved");
+  const [saveStatus, setSaveStatus] = useState<"saved" | "saving">("saved");
   const { debouncedValue, setDebouncedValue } = useDebounce(text, 500);
 
   useInitialisedDeskproAppClient((client) => {
@@ -31,9 +31,9 @@ export const Main = () => {
   useInitialisedDeskproAppClient(
     (client) => {
       if (ranFirstTime) {
-        setSaveStatus("Saving");
+        setSaveStatus("saving");
         client.setUserState<string>("scratchpad", debouncedValue);
-        setSaveStatus("Saved");
+        setSaveStatus("saved");
       }
     },
     [debouncedValue]
@@ -48,7 +48,7 @@ export const Main = () => {
   return (
     <Stack gap={10} vertical style={{ height: '100%', width: '100%' }}>
       {ranFirstTime && (
-        <Scrollbar style={{height: '100%', width: '100%'}}>
+        <Scrollbar style={{ height: '100%', width: '100%' }}>
           <ReactQuill
             style={{ border: "0px", height: "100%", width: "100%" }}
             theme="snow"
@@ -82,13 +82,11 @@ export const Main = () => {
               marginLeft: "3px",
             }}
             size="large"
-            text="Clear"
-          ></Button>
-          {debouncedValue === text ? (
-            <H1 style={{ color: "#8B9293" }}>{saveStatus}</H1>
-          ) : (
-            <H1 style={{ color: "#8B9293" }}>Typing...</H1>
-          )}
+            text={<FormattedMessage id="button.clear" />}
+          />
+          <H1 style={{ color: "#8B9293" }}>
+            <FormattedMessage id={debouncedValue === text ? `state.${saveStatus}` : "state.typing"} />
+          </H1>
         </Stack>
       </footer>
     </Stack>

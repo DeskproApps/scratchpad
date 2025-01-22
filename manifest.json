@@ -8,5 +8,6 @@
   "hasDevMode": true,
   "isSingleInstall": false,
   "serveUrl": "https://apps-cdn.deskpro-service.com/__name__/__version__",
-  "targets": [{ "target": "global", "entrypoint": "index.html" }]
+  "targets": [{ "target": "global", "entrypoint": "index.html" }],
+  "locales": ["en-GB", "es-ES"]
 }
