@@ -18,6 +18,8 @@
     "@deskpro/app-sdk": "^6.0.4",
     "@deskpro/deskpro-ui": "^8.3.1",
     "@heroicons/react": "1.0.6",
+    "@sentry/react": "^9.22.0",
+    "@sentry/vite-plugin": "^3.5.0",
     "polished": "^4.3.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
